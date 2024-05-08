@@ -27,13 +27,27 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.32</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.32</version>
+		</dependency>
 
-<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf &ndash;&gt;-->
+		<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf &ndash;&gt;-->
 <!--		<dependency>-->
 <!--			<groupId>org.thymeleaf</groupId>-->
 <!--			<artifactId>thymeleaf</artifactId>-->
 <!--			<version>3.1.2.RELEASE</version>-->
 <!--		</dependency>-->
+
 	</dependencies>
 
 	<build>
