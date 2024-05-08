@@ -15,5 +15,5 @@ public class ProductController {
     public String product(Model model){
         model.addAttribute("products",productService.listProducts());
         return "products.ftlh";
-     }
+    }
 }
