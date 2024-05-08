@@ -13,7 +13,7 @@ public class ProductController {
     private final ProductService productService;
     @GetMapping("/")
     public String product(Model model){
-        model.addAttribute("products",productService.listProducts());
+            model.addAttribute("products",productService.listProducts());
             return "products.ftlh";
     }
 }
