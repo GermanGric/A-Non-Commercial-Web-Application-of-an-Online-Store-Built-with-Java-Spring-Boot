@@ -34,19 +34,21 @@
 			<version>1.18.32</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.32</version>
-		</dependency>
-
-		<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf &ndash;&gt;-->
 <!--		<dependency>-->
-<!--			<groupId>org.thymeleaf</groupId>-->
-<!--			<artifactId>thymeleaf</artifactId>-->
-<!--			<version>3.1.2.RELEASE</version>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-freemarker</artifactId>-->
 <!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+				<!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf</artifactId>
+			<version>3.1.2.RELEASE</version>
+		</dependency>
 
 	</dependencies>
 
