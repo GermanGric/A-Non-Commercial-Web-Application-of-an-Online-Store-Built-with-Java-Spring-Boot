@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OnlineStore</title>
+</head>
+<body>
+<h1>OnlineStore</h1>
+<h2>Список товаров:</h2>
+<ul>
+    <li th:each="product : ${products}">
+        Название: <span th:text="${product.title}">Название товара</span>,
+        Описание: <span th:text="${product.description}">Описание</span>,
+        Цена: <span th:text="${product.price}">Цена</span> руб.,
+        Город: <span th:text="${product.city}">Город</span>,
+        Автор: <span th:text="${product.author}">Автор</span>
+        <form th:action="@{|product/delete/${product.id}|}" method="post">
+            <input type="submit" value="Удалить" />
+        </form>
+    </li>
+</ul>
+
+<h2>Добавить новый товар:</h2>
+<form action="#" th:action="@{/product/create}" method="post">
+    <label for="title">Название:</label>
+    <input type="text" id="title" name="title" required /><br>
+    <label for="description">Описание:</label>
+    <input type="text" id="description" name="description" required /><br>
+    <label for="price">Цена:</label>
+    <input type="number" id="price" name="price" required /><br>
+    <label for="city">Город:</label>
+    <input type="text" id="city" name="city" required /><br>
+    <label for="author">Автор:</label>
+    <input type="text" id="author" name="author" required /><br>
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>
