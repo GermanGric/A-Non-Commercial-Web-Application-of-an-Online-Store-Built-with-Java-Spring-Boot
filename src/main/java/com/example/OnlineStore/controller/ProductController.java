@@ -12,11 +12,13 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
+
     @GetMapping("/")
     public String products(Model model) {
         model.addAttribute("products", productService.listProducts());
-        return "product";
+        return "products";
     }
+
     @GetMapping("/product/{id}")
     public String productInfo(@PathVariable Long id, Model model) {
         model.addAttribute("product", productService.getProductById(id));
@@ -33,9 +35,5 @@ public class ProductController {
     public String deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
         return "redirect:/";
-    }
-    @GetMapping("/test")
-    public String testPage() {
-        return "test";  // Предварительно создайте test.html в src/main/resources/templates
     }
 }
